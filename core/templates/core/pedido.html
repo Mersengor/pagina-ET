@@ -1,0 +1,55 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguir Pedido</title>
+    <link rel="stylesheet" href="{% static 'estilos.css'%}">
+    <link rel="icon" href="img/logo1.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="body-pedido">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+    <section class="imagen-pedido"> 
+        <img src="{% static 'images/shipped.png'%}" style="width: 400px"alt="...">
+    </section>
+    <section class="buscar-pedido"> 
+    <div class="row shop-tracking-status">
+        <div class="col-md-12">
+            <div class="well">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="inputOrderTrackingID" class="col-sm-2 control-label">Nº Pedido</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputOrderTrackingID" value=""
+                                placeholder="Ingresa tu numero de pedido aqui">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <a href="estadopedido.html" type="button" id="shopGetOrderStatusID" class="btn btn-success">Ver estado del
+                                pedido<a/>
+                        </div>
+                    </div>
+                </div>   
+            </section>
+            <article id="divisor-producto">
+              <BR></BR>
+              <H3>Recuerda contactarte con la transportadora </H3>
+              <BR></BR>
+              <div class="linea"></div>
+            </article>
+            
+</body>
+
+</html>
+{% endblock %}

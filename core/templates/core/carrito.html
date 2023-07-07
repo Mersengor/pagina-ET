@@ -1,0 +1,70 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+        <h1 class="titulo_carrito">Carrito de Compras {{ nombre }} </h1>
+        <section id="catalogo">
+            <table>
+                <thead>
+                <tr>
+                    <th>Codigo</th>
+                    <th>Descripcion</th>
+                    <th>imagen</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Total</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for fila in carro %}
+                <tr>
+                    <td>{{fila.0}}</td>
+                    <td>{{fila.4}}</td>
+                    <td><img src="{{fila.3}}"></td>
+                    <td>{{fila.1}}</td>
+                    <td>{{fila.2}}</td>
+                    <td>{{fila.5}}</td>
+                    <th> <a href="{% url 'droptocar' fila.0 %}">
+                        <img src="{% static 'images/icons8-vaciar-carro-80.png'%}" alt="">
+                    </a></th>
+                </tr>
+                {% endfor %}
+            </tbody>
+            </table>      
+        </section>  
+        {% if not carro %}
+        <div class="container-fluid h-100">
+            <div class="row w-100 alling-items-center">
+                <div class="col text-center">
+            <a >Tu Carrito esta Vacio</a>
+        </div>
+        </div>
+        </div>      
+        {% endif %}   
+        <div class="container-fluid h-100">
+            <div class="row w-100 alling-items-center">
+                <div class="col text-center">
+            <a href="{% url 'comprar'%}" class="btn btn-primary btn-success">Comprar</a>
+        </div>
+        </div>
+        </div>      
+        <div class="row">
+            <div class="col-12 col-md-6 offset-md-3">
+                <div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+    {% endblock %}

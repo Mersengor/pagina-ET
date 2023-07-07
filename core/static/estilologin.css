@@ -1,0 +1,22 @@
+
+.card {
+    background: green;
+    animation: fadeBackground 6s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes fadeBackground {
+    from { background-color: #b3ceb1; }
+    to { background-color: #a2d19e; }
+  }
+.row{
+    background: green;
+    animation: fadeBackground 6s;
+    animation-fill-mode: forwards;
+    height: 900px;
+}
+
+/* @keyframes fadeBackground {
+    from { background-color: #669a61; }
+    to { background-color: #78a375; }
+  }*/

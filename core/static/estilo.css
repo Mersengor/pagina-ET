@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Fira Sans', sans-serif;
+    /* font-size: 1.2rem; */
+}
+
+
+h1{
+    font-size: 2.2rem;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin: 20px 0px;
+    font-weight: bolder;
+}
+
+#usuario {
+    height: 100%;
+    /* border: 1px red solid; */
+    display: flex;
+    column-gap: 5px;
+    align-items: center;
+}
+
+#usuario>a {
+    color: #ffffff;
+    display: block;
+    height: 40px;
+    background-color: #CE9864;
+    width: 100px;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    transition-duration: 0.5s;
+}
+
+#usuario>a:hover {
+    background-color: #ffffff;
+    color: #0C3F37;
+    transition-duration: 0.5s;
+}
+
+
+
+.planta{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 15%;
+    border: 2px #00000004 solid;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.cant-precio{
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.cantidad, .precio{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    /* border: 1px red solid; */
+}
+
+.cantidad{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.precio{
+    display: flex;
+    align-items: flex-end;
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
+.tachado{
+    text-decoration: line-through;
+}
+
+.agregar{
+    background-color: #0C3F37;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    column-gap: 10px;
+    padding: 5px 10px;
+    margin: 10px 0px;
+    cursor: pointer;
+}
+
+.agregar:hover{
+    background-color: #CE9864;
+}
+
+@media (max-width: 800px) {
+    .planta{
+        width: 25%;
+    }
+
+    header>.abajo{
+        justify-content: space-evenly;
+    }
+
+    .abajo > h1{
+        width: 40vw;
+    }
+
+    #menu-pc{
+        display: none;
+    }
+
+    footer > div{
+        font-size: .8rem;
+    }
+}
+
+/* LOGIN */
+#formlogin{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    height: 50vh;
+}
+
+#login, #registro{
+    display: flex;
+    width: 100%;
+    align-items: center;    
+    flex-direction: column;
+    row-gap: 5px;
+    margin: 40px 0px;    
+    /* z-index: -1; */
+}
+
+#login >form{
+    width: 50%;
+}
+
+
+#botoneslogin {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+#botoneslogin > button{ 
+    background-color: #0C3F37;
+    color: #ffffff;
+    width: 48%;
+    height: 2rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+#botoneslogin > button:hover{ 
+    background-color: #CE9864;
+}
+
+#login > a, #registro > a{
+    color: #0C3F37;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+#registro{
+    opacity: 0;
+    /* transform: rotate(-180deg); */
+}
+
+.hide{
+    transition-duration: 1s;
+    transform: translateY(0px);
+    opacity: 0;
+}
+
+.show{
+    transition-duration: 1s;
+    transform: translateY(-280px);
+    opacity: 1 !important;
+}
+
+.showLogin{
+    transition-duration: 1s;
+    transform: translateY(0px);
+    opacity: 1 !important;
+}
+/*Historial */
+.historial{
+    margin-top: 30px;
+}
+/* carrito de compras */
+#catalogo{
+    margin-top: 70px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    justify-content: space-evenly;
+    row-gap: 20px;
+ margin-block-end: 10%;
+   
+} 
+.titulo_carrito{
+    margin-top: 30px;
+
+}
+tablaProductos {
+     display: flex;
+     justify-content: center;
+     
+}
+
+table{
+    width: 90%;
+}
+
+thead{
+    background-color: #047948;
+    color: #ffffff;
+    height: 30px;
+text-align: center;
+}
+
+th{
+    padding: 5px;
+    font-size: 1.4rem;
+}
+td{
+    text-align: center;
+}
+
+td > img{
+    height: 100px;
+}
+
+.icono {
+    border: 2px #cecece solid;
+    padding: 5px 0px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.agregarProducto {
+    display: flex;
+    border: 2px #cecece solid;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+    margin-left: 5%;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 5px 0px;
+}
+
+.agregarProducto:hover {
+    background-color: #CE9864;
+    color: #ffffff;
+}

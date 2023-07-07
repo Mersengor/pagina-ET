@@ -1,0 +1,30 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="row w-100">
+    {% for planta in plantas%}
+    <div class="col-lg-3" style="margin-left: 110px;">
+    <div class="container-items" style="padding: 20px 20px;">
+        <div class="item" style="width: 100%;">
+          <figure>
+            <img
+              src="{{ planta.imagen }}"
+              alt="producto"
+            />
+          </figure>
+          <div class="info-product">
+            <h2> {{planta.descripcion}}</h2>
+            <p class="oferta">Oferta: ${{planta.precio}}</p>
+            <p class="price">Normal: {{planta.tachado}}</p>
+            <span class="stock" style="text-align: center;"> Stock: {{ planta.stock }} </span>
+            <a href="{% url 'addtocar' planta.codigo %}" class="btn btn-primary btn-sm ml-auto btn-success btn-outline-green">Añadir al carrito</a>
+          </div>
+        </div>
+      </div>
+    </div>
+      {% endfor %}
+</div>
+
+{% endblock %}
